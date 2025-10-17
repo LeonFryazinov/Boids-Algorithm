@@ -180,7 +180,7 @@ screen_size = (1920,1080)
 
 screen = pygame.display.set_mode(screen_size)
 
-
+#sets amount of boids created.
 boid_amount = 100
 boid_list = []
 
@@ -193,6 +193,8 @@ running = True
 mouse_pos = (0,0)
 placeable_radius = 10
 obst_list = []
+
+clock = pygame.time.Clock()
 
 allow_obstacles = False #set to true if want option to create obstacles
 
@@ -251,6 +253,7 @@ while running:
     
     
     pygame.display.update()
+    clock.tick(60)
     
 
 pygame.quit()
